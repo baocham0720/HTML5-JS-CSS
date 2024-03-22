@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .image-container{
+            display: block;
+        }
+        .image{
+            display: none;
+        }
+        .image-container:hover +.image{
+            display: block;
+            width: 300px;
+            height: 300px;
+            padding-top: 5%;
+           
+        } 
+    </style>
+        <img class="image-container" src="44d584d419e1ba8127bfc6f089b63e79.jpeg" width="100px" height="100px">
+        <img class="image" src="44d584d419e1ba8127bfc6f089b63e79.jpeg">
+</body>
+</html>

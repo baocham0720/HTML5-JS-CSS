@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Viết chương trình nhập vào một mảng số nguyên n từ bàn phím. Kiểm tra số n và in các phần tử là số nguyên tố ra màn hình
+        var n=parseInt(prompt('nhập số n:'))
+        var arr=new Array()
+        //hàm nhập n có các phần tử
+        function inputArr(){
+            for(i=0;i<n;i++)
+            arr[i]=parseInt(prompt('phần tử thứ:'+(i+1)+':'))
+        }
+        //hàm kiểm tra nguyên tố
+        function checkNgto(num){
+            kt=1
+            for(i=2;i<=num/2;i++){
+            if(num%i==0){
+            
+                kt=0; break}
+                return kt
+            }
+            }
+            //Hàm in các số nguyên tố
+            function displayPrim(){
+                for(item of arr){
+                    if(checkNgto(item)==1)
+                    document.write(item +'\t')
+                }
+            }
+         
+        inputArr()
+       // alert(checkNgto(n))
+        displayPrim()
+
+    </script>
+</body>
+</html>

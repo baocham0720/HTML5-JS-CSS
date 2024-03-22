@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Xây dựng hàm tính tổng hai số a và b
+        //Cách 1: xây dựng hàm không có tham số
+        var a=7, b=10
+        function tinhtong(){ //hàm không có giá trị trả về
+            s=a+b
+            alert(s)
+        }
+        //hàm có tham số
+        function tinh(c,d){ //hàm có giá trị trả về
+            s=c+d
+            return s
+        }
+        tinhtong() //gọi hàm không có giá trị trả về
+        s=tinh(45,10) //gọi hàm có gái trị trả về
+        alert(s)
+        //Trong hàm có thể gọi một hàm khác
+        function sum(){
+            tinhtong()
+        }
+        sum()
+
+    </script>
+</body>
+</html>

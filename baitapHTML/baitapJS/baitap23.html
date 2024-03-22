@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="text" >
+    <button onclick="Onclick()">Ấn</button>
+    <script>
+        function Onclick(){
+            let text = document.getElementById('text').value;
+            let number = parseInt(text);
+            if(!isNaN(number)){
+                for ( var i = 1; i<=number;i++){
+                    document.write(i+"\t");
+                }
+            }
+            else{
+                alert("Vui lòng nhập số hợp lệ");
+            }
+        }
+    </script>
+</body>
+</html>

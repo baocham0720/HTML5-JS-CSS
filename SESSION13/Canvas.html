@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        canvas{
+            width:500;
+            height:400;
+            border: 1px solid red ;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+    <canvas id="myCanvas"></canvas>
+    <canvas id="imgCanvas"></canvas>
+    <img id="img2d" src="44d584d419e1ba8127bfc6f089b63e79.jpeg">
+    <script>
+        var t=document.getElementById('myCanvas')
+        var dh=t.getContext("2d"); //khởi tạo ra một đồ hoạ 2d
+        dh.moveTo(0,0); //toạ độ x,y
+        dh.lineTo(50,50); //chiều dài toạ độ x,y đến đâu
+        dh.arc(50,50,30,0,2*Math.PI) //vẽ hình tròn (x,y,r,0,2)
+        dh.fillStyle='blue' //màu chữ
+        dh.font='45pt tahoma' //kích cỡ chữ và phông chữ
+        dh.fillText('Xin chào', 50,50) //viết chữ ,x,y
+        dh.stroke(); //đường line màu sắc 
+
+        //chèn đưa hình vào canvas
+        window.onload= function(){ 
+        var timg=document.getElementById('imgCanvas')
+        var dhimg=timg.getContext("2d");
+        var h=document.getElementById('img2d')
+        dhimg.drawImage(h,10,10)
+        }
+    </script>
+</body>
+</html>

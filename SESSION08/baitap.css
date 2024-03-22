@@ -1,0 +1,30 @@
+.flex-container{
+    display:flex;
+    justify-content: space-between;
+    width: 300px;
+    flex-direction: column;
+}
+/*.flex-column{
+    flex:1;
+}*/
+.flex-container div{
+    display:flex;
+    background-color: aquamarine;
+    margin-top : 5px;
+   /*align-content: space-between;
+    flex:1;*/
+    justify-content: space-between;
+    align-items:center ;
+
+}
+.item{
+    display:flex;
+    justify-content: flex-start;
+}
+/*.button{
+    display:flex;
+    justify-content: center;
+}*/
+button:hover{
+    background-color: rgb(242, 68, 19);
+}

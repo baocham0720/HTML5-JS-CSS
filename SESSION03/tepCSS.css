@@ -1,0 +1,51 @@
+/*
+*Cú pháp css : syntax
+selector{
+    property 1:value;
+    property 2:value;
+}
+*/
+/*khai báo bộ chọn tổng quát*/
+*{
+    font-family:'Courier New', Courier, monospace ;
+    font-size: 30pt;
+  
+}
+/*khai báo bộ chọn Id
+  #selectorName{
+    pro:value;
+  }
+*/
+#FontSize{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20pt;
+}
+/*khai báo bộ chọn Class
+   .selectorName{
+       pro:value;
+   }
+*/
+.font_size{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20pt;
+    color:brown;
+}
+/*khai báo bộ chọn Type
+SelertorElementOfHTML{
+    pro:value;
+}
+*/
+h1{
+    color: brown;  
+}
+a:visited{
+    color:crimson;
+}
+a:hover{
+    color:coral;
+    font-size: 50pt
+}
+button:hover{
+    color:blue;
+    background-color: chocolate;
+}

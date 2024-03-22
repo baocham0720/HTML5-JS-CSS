@@ -1,0 +1,23 @@
+.flex-container{
+    height:200px ;
+    display:flex;
+    background-color: aqua;
+    /*flex-direction: column;*/ /*hiển thị theo cột*/
+    /*flex-wrap:wrap;*/ /*hiển thị thep hàng - tự động rớt từng ô xuống hàng theo kích thước màn hình*/
+    /*flex-flow:row wrap;*/
+    flex-flow: wrap;
+    justify-content: right;
+    align-items:stretch;
+    align-content: space-between;
+}
+.flex-container div{
+    background-color: brown;
+    margin: 5px;
+    padding: 20px;
+    text-align: center;
+}
+@media (max-width:800px){
+    .flex-container{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai20</title>
+</head>
+<body>
+    <script>
+        var n=3;
+        var mang = [];
+        for(var i=0; i<n;i++){
+            mang[i] = prompt("Nhập chuỗi");
+        }
+        function demchuoi(n,a=[]){
+            var d=0;
+            for(var i=0; i<n;i++){
+                for(var j=i+1; j<n;j++)
+                if(a[i] == a[j]){
+                    d++;
+                }
+            }
+            return d;
+        }
+        function ktChuoiSo(chuoi = []){
+            var dems=0;
+            for(var i=0;i<chuoi.length;i++){
+                if(chuoi[i] >= '0' && chuoi[i]<='9'){
+                    dems++;
+                }
+            }
+            return dems == chuoi.length
+        }
+        function ktMangChuoi(n,a=[]){
+            for(var i =0; i<n;i++){
+                if(ktChuoiSo(a[i])){
+                    return true;
+                }
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

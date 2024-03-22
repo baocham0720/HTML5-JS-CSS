@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Ex1: Tạo đối tượng là hình chữ nhật có 2 thuộc tính là chiều dài và chiều rộng nhập từ bàn phím. Tính S
+        //Cách 1:
+        var cd=parseInt(prompt('nhập chiều dài'))
+        var cr=parseInt(prompt('nhập chiều rộng'))
+        var hcn=new Object()
+        hcn.width=cd
+        hcn.height=cr
+        hcn.dientich=function(){
+            return(hcn.width*hcn.height)
+        }
+        alert(hcn.dientich())
+        //Cách 2:
+        var hinh={
+            width:parseInt(prompt('nhập chiều dài')),
+            height:parseInt(prompt('nhập chiều rộng')),
+            dientich:function(){
+                return(hinh.width*hinh.height)
+            }
+        }
+        alert(hinh.dientich())
+
+        /*Ex2:Tạo đối tượng Sv gồm các thuộc tính sau:
+        MaSV, TenSV, TuoiSV, DiachiSV, HTML, SQL, JAVA. Thực hiện các yêu cầu sau
+        - Nhập một SV từ bàn phím
+        - Tính điểm trung bình SV và in danh sách ra màn hình */
+        var stud=new Object()
+        stud.MaSV=prompt('nhập mã SV')
+        stud.TenSV=prompt('nhập tên SV')
+        stud.TuoiSV=parseInt(prompt('nhập tuối SV'))
+        stud.DiachiSV=prompt('nhập địa chỉ SV')
+        stud.html=parseFloat(prompt('html'))
+        stud.sql=parseFloat(prompt('sql'))
+        stud.java=parseFloat(prompt('java'))
+        //phương thức tính điểm trung bình của SV
+        stud.dtb=function(){
+            tong=(stud.html+stud.sql+stud.java)/3
+            return tong
+        }
+        //phương thức hiển thị SV ra màn hình
+        stud.displayStudent=function(){
+            document.write('<table border=1>'+'<tr>'+
+                '<th>Mã SV</th>'+
+                '<th>Tên SV</th>'+
+                '<th>Tuổi SV</th>'+
+                '<th>Địa chỉ SV</th>'+
+                '<th>HTML</th>'+
+                '<th>SQL</th>'+
+                '<th>JAVA</th>'+
+                '<th>ĐTB</th>'+
+                '</tr>'+
+                '<tr>'+
+                    '<td>'+stud.MaSV+'</td>'+
+                    '<td>'+stud.TenSV+'</td>'+
+                    '<td>'+stud.TuoiSV+'</td>'+
+                    '<td>'+stud.DiachiSV+'</td>'+
+                    '<td>'+stud.html+'</td>'+
+                    '<td>'+stud.sql+'</td>'+
+                    '<td>'+stud.java+'</td>'+
+                    '<td>'+stud.dtb()+'</td>'+
+                    '</tr>')
+        }
+        stud.displayStudent()
+    </script>
+</body>
+</html>

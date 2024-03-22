@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Viết chương trình tính tổng các số từ 1-10
+        var j=1, s=0
+        do{
+            s=s+j
+            j+=1
+        }
+        while(j<=10)
+        alert('tổng là:'+s)
+    //Viết chương trình nhập vào một số nguyên n>10. Nếu n<=10 thì nhập lại các số n ngược lại. Tính tổng các số chẵn n
+     do{
+        var n=parseInt(prompt('nhập số n')) }
+    while(n<=10)
+    var i=2,s=0
+     do{ 
+        /*if(i%2==0)*/ //cách 1: khi i=1 và i+=1 thì phải có điều kiện if
+        s=s+i
+        /*i+=1*/ i+=2
+     }
+     while(i<=n)
+     alert('tổng là:'+s)
+    </script>
+</body>
+</html>

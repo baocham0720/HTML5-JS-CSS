@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nội dung tiêu đề</h1>
+    <form methor="" action="">
+        <p>
+            <label> Họ và tên *</label>
+            <input type="text" id="txthoten" autocomplete="true" autofocus placeholder="họ và tên" required>  
+        </p>
+        <p>
+            <label> Ngày sinh </label>
+            <input type="date" id="txtngaysinh">
+        </p>
+        <p>
+            <label> Địa chỉ </label>
+            <input type="text" id="txtdiachi">
+        </p>
+        <p>
+            <label> Email </label>
+            <input type="mail" id="txtmail" placeholder="email" pattern="">
+        </p>
+        <p>
+            <label> Số điện thoại </label>
+            <input type="tel" id="txtsdt" pattern="[0-9]{4}.[0-9]{3}.[0-9]{3}" required>
+        </p>
+        <p>
+            <label> Phái </label>
+            <input type="radio" id="rd Nam" name="rd"> Nam
+            <input type="radio" id="rd Nu" name="rd"> Nữ
+        </p>
+        <p>
+            <label> Nghề nghiệp </label>
+            <select>
+                <option value="">--Chọn--</option>
+                <option value="Giáo viên">Giáo viên</option>
+                <option value="Nhân viên">Nhân viên</option>
+                <option value="Công nhân">Công nhân</option>
+            </select>
+        </p>
+        <p>
+            <label> Chọn sản phẩm tham gia </label>
+            <input list="lst" name="lstSP">
+            <datalist id="lst">
+                <option > Kem đánh răng</option>
+                <option >Dầu gội đầu</option>
+                <option >Bột giặt</option>
+                <option >Sữa tắm</option>
+            </datalist>
+        </p>
+        <p>
+            <label> Số người dự đoán tham gia </label>
+            <input type="number" id="txtSNTG">
+        </p>
+        <p>
+            <input type="checkbox" id="chkdongy">Chấp nhận các điều khoản
+        </p>
+        <input type="submit" value="Đồng ý">
+        <p>
+            <textarea maxlength="">Xin chào</textarea>
+        </p>
+        
+    </form>
+</body>
+</html>

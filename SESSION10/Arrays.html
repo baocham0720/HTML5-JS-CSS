@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Cách 1: Khai báo mảng gán giá trị
+        var arr1=[5,8,9,7,5,'abc']
+        //Cách 2: Khai báo mảng và gán giá trị
+        var arr2=new Array(7,8,9)
+        //Cách 3: Khai báo mảng giá trị
+        var arr3=new Array(3)
+        arr3[0]=1; arr3[1]=6; arr3[2]=9
+        //In giá trị đầu tiên trong mảng arr1
+        alert(arr2[0])
+        //Nhập các phần tử trong mảng từ bàn phím
+         arr4=new Array(5)
+        //Duyệt qua các phần tử trong mảng để nhập giá trị
+        for(i=0; i<5;i++){
+            arr4[i]=parseInt(prompt('nhập phần tử thứ'+ (i+1)+':'))
+        }
+        //Xuất giá trị các phần tử trong mảng ra màn hình
+        for(i=0; i<arr4.length; i++){
+            document.write(arr4[i]+'\t')
+        }
+        //tính tổng các phần tử trong mảng vừa nhập
+        s=0
+        for(i=0;i<arr4.length;i++)
+        s=s+arr4[i]
+        alert('tổng là:' +s)
+    </script>
+</body>
+</html> 

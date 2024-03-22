@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      /*  var pa=/a/
+        kq=pa.test('hnh')//trả về true hoặc false
+        alert(kq)
+        var pa=/a/
+        kq=pa.exec('anh') //đúng trả về kq - sai trả nune
+        alert(kq)*/
+        var pa=/[0-9]{4}.[0-9]{3}.[0-9]{3}/
+        //alert(pa.test('0905.912.456'))
+        /*function checkNum(){ 
+            var num=document.getElementById('txtNum').value
+            var p=/^\d+$/
+            alert(p.test(num))
+        }*/ // dùng thuộc tính pattern ở dưới để thay cho đoạn khai báo này
+    </script>
+    <form>
+    <input type="text" id="txtNum" pattern="^\d+$" required> 
+    <input type="submit" value="checkNumber">
+    </form>
+</body>
+</html>

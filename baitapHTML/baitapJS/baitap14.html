@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai14</title>
+</head>
+<body>
+    <script>
+        //hàm kt ng tó
+        function ktnt(n){
+            var kt = true;
+                if(n<= 1){
+                kt = false;
+            }
+            else{
+                for(var i =2; i<=Math.sqrt(n);i++){
+                    if(n % i == 0){
+                        kt = false;
+                        break;
+                    }
+                }
+            }
+            return kt;
+        }
+        //khai báo sẵn mảng 
+        var n = 10;
+        var a = [];
+        for(var i=0 ;i<n;i++){
+            a[i] = i+1;        
+        }
+        var tong=0, tongchia=0,demChan=0 ,demnt=0,Max =a[1];
+        var ktx=false;
+        var x = parseInt(prompt("Nhập x:"));
+        //tính toán
+        for(var i=0; i<n;i++){
+            //tính tổng
+            tong+=a[i];
+            //tổng chia hết 3 và 5
+            if(a[i] % 3 == 0 && a[i] % 5 ==0){
+                tongchia+=a[i];
+            }
+            //dem chẵn
+            if(a[i] % 2== 0){
+                demChan++;
+            }
+            //kt x
+            if(x == a[i]){
+                ktx = true;
+            }
+            //dếm số ng to
+            if(ktnt(a[i]) == true){
+                demnt++;
+            }
+            //tìm max 
+            Max = Math.max(Max,a[i]);
+        }
+        document.writeln("a) tổng = "+tong);
+        document.writeln("<br>b) tổng chia hết 3 và 5 = "+tongchia);
+        document.writeln("<br>c) đếm sô chẵn = "+demChan);
+        if(ktx == true){
+            document.writeln("<br>d) có ở trong mảng  ");
+        }
+            
+        else {
+            document.writeln("<br>d)  không có ở trong mảng  ");
+        }
+           
+        document.writeln("<br>e) dếm số nguyên tố = "+demnt);
+        document.writeln("<br>i) Max = "+Max);
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //viết hàm đảo ngược số nguyên nhập từ bàn phím. input:456, output:654
+        var n=parseInt(prompt('nhập số n'))
+        function rev(n){
+            revs=0
+            while(n>0){
+                res=n%10
+                revs=revs*10+res
+                n=parseInt(n/10)
+            }
+            return revs
+        }
+        alert(rev(n)) 
+    </script>
+</body>
+</html>

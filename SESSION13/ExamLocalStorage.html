@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Hiện thị 2 sản phẩm bất kì và 2 nút lệnh Add cho 2 sản phẩm đó và một nút lệnh View Cart (giỏ hàng)
+        - Nháy vào nút lệnh Add của sản phẩm thứ nhất và thứ 2 thì thêm sản phẩm đó vào session (giỏ hàng)
+        - Nháy chuột vào nút View Cart thì hiner thị giỏ hàng chứa các sản phẩm đã thêm vào*/
+
+        var objPro1=new Object()
+        objPro1.name1='abc1'
+        objPro1.add1=function(){
+            sessionStorage.setItem('name1',objPro1.name1)
+        }
+        var objPro2=new Object()
+        objPro2.name2='abc2'
+        objPro2.add2=function(){
+            sessionStorage.setItem('name2',objPro2.name2)
+        }
+        var objPro3=new Object()
+        objPro3.name3='abc3'
+        objPro3.add3=function(){
+            sessionStorage.setItem('name3',objPro3.name3)
+        }
+        document.write('<table>'+ '<tr>'+
+            '<td>'+objPro1.name1+'</td>'+
+            '<td>'+objPro2.name2+'</td>'+
+            '<td>'+objPro3.name3+'</td>'+
+            '</tr>'+ 
+            '<tr>'+
+                '<td><input type="button" id="btnAdd1" value="Add" click='+objPro1.add1()+'>'+
+                '<td><input type="button" id="btnAdd2" value="Add" click='+objPro2.add2()+'>'+
+                '<td><input type="button" id="btnAdd3" value="Add" click='+objPro3.add3()+'>'+
+            '</tr>' +
+            '</table>')
+            function view_pro(){
+                document.write('<table>' +
+                    '<tr>'+
+                        '<td>'+sessionStorage.getItem("name1")+'</td>'+
+                        '<td>'+sessionStorage.getItem("name2")+'</td>'+
+                        '<td>'+sessionStorage.getItem("name3")+'</td>'+
+                    '</tr>'+
+                    '</table>')
+            }
+    </script>
+    <button onclick="view_pro()">View Cart</button>
+</body>
+</html>

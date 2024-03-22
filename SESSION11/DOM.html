@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="txt1"></p> 
+    <p id="txt2">123</p>
+    <p id="txt3">123</p>
+    <script>
+        document.getElementById('txt1').innerHTML='Xin chào các bạn!' //phải thông qua id
+        var st1=document.getElementById('txt2').outerText
+        var st2=document.getElementById('txt3').outerText //outerText: lấy nội dung ở bên ngoài webpage đưa vào JS để xử lí, xử lí xong đưa dữ liệu ra ngoài webpage
+        tong=parseInt(st1)+parseInt(st2)
+        alert(tong)
+    </script>
+</body>
+</html>

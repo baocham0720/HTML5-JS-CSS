@@ -1,0 +1,30 @@
+.image-container {
+    width: 300px; /* Thay đổi kích thước theo mong muốn */
+    height: auto;
+}
+
+.image-container img {
+    width: 300px;
+    height: auto;
+}
+.overlay {
+    /*position: absolute;*/
+    margin-top: 10px;
+    top: 0;
+    left: -100%; /* Ảnh thứ 2 sẽ ẩn ngoài màn hình ban đầu */
+    width: 400px;
+    height: 400px;
+    background-color: rgba(189, 240, 4, 0.7); /* Màu nền overlay */
+    /*transition: left 0.3s ease; /* Tạo hiệu ứng di chuyển mượt mà */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.image-container:hover .overlay {
+    left: 0; /* Khi di chuột vào, ảnh thứ 2 hiện ra */
+    margin-left: 20px;
+    opacity: 1;
+    
+}

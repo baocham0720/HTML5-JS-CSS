@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         //Viết chương trình nhập vào một mảng số nguyên n từ bàn phím. Kiểm tra số n và in các phần tử là số chẵn ra màn hình
+         var n=parseInt(prompt('nhập số n:'))
+        var arr=new Array(n)
+        //hàm nhập số nguyên n có phần tử
+        function inputArr(){
+        for(i=0;i<n;i++)
+            arr[i]=parseInt(prompt('phần tử thứ'+ (i+1) +':'))
+        
+        }
+        //hàm kiểm tra chẵn lẻ
+        function checkEven(num){
+            if (num%2==0 )
+            return 1 
+            else
+            return 0
+        }
+        //hàm in các số chẵn trong mảng
+        function displayEven(){
+            for(i=0;i<arr.length;i++)
+            if(checkEven(arr[i])==1)
+            document.write(arr[i]+'\t')
+        }
+        inputArr()
+        alert(checkEven(8)) //số chẵn ra 1, số lẻ ra 0
+        displayEven()
+    </script>
+</body>
+</html>

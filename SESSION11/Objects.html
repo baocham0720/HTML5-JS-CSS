@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var students=new Object() //tạo đối tượng sv
+        students.id='001'
+        students.name='Nguyen Van A' //tạo thuộc tính và gán giá trị
+        students.address='Da Nang'
+        document.write(students.name) //thay .id or .address để view 001 or Da Nang -> truy cập thuộc tính và lấy giá trị
+        //Tự định nghĩa ra một đối tượng khách hàng
+        var idCust , nameCust, addressCust //khai báo thuộc tính
+        function objCustumer(id, name, address){ //xây dựng đối tượng KH
+            this.idCust=id
+            this.nameCust=name
+            this.addressCust=address
+        }
+        var objCust=new objCustumer('001','Nguyen Van A','Quang Nam') //khởi tạo đối tượng KH
+        document.write('<br>') //in tên KH ra màn hình
+        document.write(objCust.addressCust)
+    </script>
+</body>
+</html>

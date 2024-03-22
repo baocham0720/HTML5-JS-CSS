@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Viết chương trình nhập só nguyên n. Sau đó in ra các thứ trong tuần
+        var n=parseInt(prompt('nhập số n'))
+        switch(n){
+            case 1: alert('chủ nhật');break;
+            case 2: alert('thứ 2');break;
+            case 3: alert('thứ 3');break;
+            case 4: alert('thứ 4');break;
+            case 5: alert('thứ 5');break;
+            case 6: alert('thứ 6');break;
+            case 7: alert('thứ 7');break;      
+            default: alert('không có các thứ trong tuần' )    
+        }
+        //BTAP: Viết chương trình vào tháng và năm. Kiểm tra xem tháng đó có bao nhiêu ngày và in ra màn hình
+        var thang=parseInt(prompt('nhập tháng'))
+        var nam=parseInt(prompt('nhập năm'))
+        if(thang<1 || thang>12)
+            alert('tháng không hợp lệ')
+        else
+        switch(thang){
+        case 4:
+        case 6:
+        case 9:
+        case 11: alert('tháng có 30 ngày');break;
+        case 2: if((nam%4==0 && nam%100!=0) || nam%400==0)
+                 {alert('tháng có 29 ngày');break;}
+            else
+                 {alert('tháng có 28 ngày');break}
+            default: alert('tháng có 31 ngày')
+    }
+    </script>
+</body>
+</html>

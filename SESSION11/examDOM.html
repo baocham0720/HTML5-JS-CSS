@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <p>
+            <label>UserName:</label>
+            <input type="text" id="txtUser" required autofocus placeholder="Username"/>
+        </p>
+        <p>
+            <label>Password:</label>
+            <input type="password" id="txtPass" required placeholder="password"/><br>
+            <label id="lblMass"></label>
+        </p>
+        <!--<button id="btnLogin" onclick="login();">Login</button>-->
+        <button id="btnLogin">Login</button>
+   
+    <script>
+        /*tạo form Login gồm 2 trường hợp UserName và Password. Thực hiện yêu cầu sau:
+        - Tạo một đối tượng Account (username và Passwword) và gán giá trị mặc định UserName='admin', password='123'
+        - Nếu nhập User và Pass rồi nhấn vào nút lệnh Login khi user và pass có trùng với tài khoản đã tạo thì thông báo 'Đăng nhập thành công'
+        - Ngược lại thì thông báo 'Đăng nhập không thành công' Yêu cầu đăng nhập lại.*/
+        //Tạo đối tương Accout
+        var objAcc=new Object()
+        objAcc.username='admin'
+        objAcc.password='123'
+        /*function login(){
+            var user=document.getElementById('txtUser').value
+            var pass=document.getElementById('txtPass').value
+            if(user==objAcc.username && pass==objAcc.password)
+            document.getElementById('lblMass').innerHTML='Đăng nhập thành công!'
+            else
+            document.getElementById('lblMass').innerHTML='Đăng nhập không thành công!'
+        //Cách 2: thay cho gọi onclick của button, không cần gọi onclick
+        document.getElementById('btnLogin').addEventListener('click',login)
+           }*/
+       //Cách 2: gộm luôn function chung
+        document.getElementById('btnLogin').addEventListener('click',function login(){
+            var user=document.getElementById('txtUser').value
+            var pass=document.getElementById('txtPass').value
+            if(user==objAcc.username && pass==objAcc.password)
+            document.getElementById('lblMass').innerHTML='Đăng nhập thành công!'
+            else
+            document.getElementById('lblMass').innerHTML='Đăng nhập không thành công!'
+        })
+       
+       </script>
+
+</body>
+</html>

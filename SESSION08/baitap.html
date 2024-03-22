@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="baitap.css">
+</head>
+<body>
+    <div class="flex-container">
+        <div>
+            <label>Họ và tên</label>
+            <input type="text">
+        </div>
+        <div>
+            <label>Địa chỉ</label>
+            <input type="text">
+        </div>
+        <div>
+            <label> Số điện thoại </label>
+            <input type="tel" pattern="[0-9]{4}.[0-9]{3}.[0-9]{3}" required>
+        </div>
+        <div>
+            <label> Phái </label>
+            <div>
+            <input type="radio" name="rd"> Nam
+            <input type="radio" name="rd"> Nữ
+            </div>
+        </div>
+        <div>
+            <label> Nghề nghiệp </label>
+            <select>
+                <option value="">--Chọn--</option>
+                <option value="Giáo viên">Giáo viên</option>
+                <option value="Nhân viên">Nhân viên</option>
+                <option value="Công nhân">Công nhân</option>
+            </select>
+        </div>
+        <div>
+            <label> Chọn sản phẩm tham gia </label>
+            <input list="lst" name="lstSP">
+            <datalist id="lst">
+                <option > Kem đánh răng</option>
+                <option >Dầu gội đầu</option>
+                <option >Bột giặt</option>
+                <option >Sữa tắm</option>
+            </datalist>
+        </div>
+        <div>
+            <label> Số người dự đoán tham gia </label>
+            <input type="number">
+        </div> 
+        <div class="item">
+            <input type="checkbox" id="chkdongy"><label>Chấp nhận các điều khoản</label>
+        </div>
+        <div>
+             <button>Đồng ý</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Tạo 2 input radio Nam và Nữ. Thực hiện các yêu cầu sau:
+        - Nếu chọn vào Radio Nam thì hiện ra thông báo là 'Bạn đã chọn giới tính là nam'
+        - Ngược lại thì hiện ra thông báo 'Bạn đã chọn giới tính là nữ'*/
+        $(document).ready(function(){
+            $('input[name="rd"]').change(function(){
+                var v=$('input[name="rd"]:checked').val()
+                if(v=='nam'){
+                    $('.nam-info').show()
+                    $('.nu-info').hide()
+                }
+                else{
+                    $('.nam-info').hide()
+                    $('.nu-info').show()
+                }
+                
+            })
+        })
+       </script>
+     <style>
+            label{
+                display: none;
+            }
+    </style>
+        <input type="radio" id="nam" name="rd" value="nam"> Nam
+        <input type="radio" id="nu" name="rd" value="nu"> Nữ
+        <label id="nam-info" class="nam-info">Đây là nam</label>
+        <label id="nu-info" class="nu-info">Đây là nữ</label>
+</body>
+</html>

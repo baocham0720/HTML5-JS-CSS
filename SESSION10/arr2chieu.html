@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //khai báo mảng 2 chiều
+        var arr1=[[5,3],[10,6]]
+        //cách 2:
+        var arr2=new Array(3)
+            arr2[0]=new Array('001','Nguyễn Văn A','0905')
+            arr2[1]=new Array('002','Nguyễn Văn B','0906')
+            arr2[2]=new Array('003','Nguyễn Văn C','0907')
+        //Truy cập vào mảng 2 chiều
+        kq=arr2[0][0]
+        alert(arr1[0][0])
+        //hiển thị danh sách SV ra Web
+       for(i=0;i<arr2.length;i++){
+            for(j=0;j<arr2[i].length;j++){
+                document.write(arr2[i][j]+'\t')
+            }
+            document.write('<br>')
+        }
+        //In table
+        document.write('<table border=1><tr><th>Mã SV</th><th>Tên SV</th><th>SĐT</th>')
+            for(i=0;i<arr2.length;i++){
+                document.write('<tr>')
+            for(j=0;j<arr2[i].length;j++){
+                document.write('<td>'+arr2[i][j]+'<td>')
+            }
+            document.write('</tr>')
+        }
+        document.write('</table>')
+    </script>
+</body>
+</html>

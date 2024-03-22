@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 590px;
+            height: 190px;
+            margin: auto;
+        }
+        table, tr, th ,td{
+            border: 1px solid rgb(57, 19, 183);
+            border-collapse: collapse;
+            padding: 5px;
+            margin: auto;
+        }
+        td{
+            width: 687px;
+        }
+        tr{
+            background-color: rgb(40, 239, 123);
+        }
+        input{
+            width: 90px;
+            padding: 3px;
+            border: 1px inset rgb(178, 173, 173);
+        }
+        input[type="radio"]{
+            width: 10px;
+        }
+        button{
+            margin-left: 250px;
+            padding: 5px;
+            width: 90px;
+        }
+    </style>
+</head>
+<body>
+        <table  border="1" align="center" cellpadding="0" cellspacing="0">
+			<tr> 
+                <td align="center" style="font-size: 20px;color: rgb(32, 32, 32);font-weight: bold" colspan="3">
+                    Phiếu đăng ký tham giá chường trình khuyễn mãi
+                </td>       
+			</tr>
+            <tr>
+                <td><label for="txtName">Họ và tên</label></td>
+                <td><input type="text" id="txtName" style="width: 250px;" placeholder="Họ và tên"></td>
+            </tr>
+            <tr>
+                <td><label for="txtAddress">Địa chỉ</label></td>
+                <td><input type="text" id="txtAddress" style="width: 200px;" placeholder="Địa chỉ"></td>
+            </tr>
+            <tr>
+                <td><label for="txtPhone">Điện thoại</label> </td>
+                <td><input type="text" id="txtPhone" style="width: 150px;" placeholder="Điện thoại"></td>
+            </tr>
+            <tr>
+                <td><label for="txtMale"></label>Phái</td>
+                <td><input type="radio" id="txtMale" value="Nam">Nam
+                <input type="radio"  id="txtFemale" value="Nữ">Nữ</td>
+            </tr>
+            <tr>
+                <td><label for="txtNN">Nghề nghiệp</label></td>
+                <td>
+                    <select name="job" id="txtNN" style="padding: 3px; font-size: 14px;">
+                        <option value="doctor">Bác sĩ</option>
+                        <option value="engineer">Kĩ sư</option>
+                        <option value="teacher">Giáo viên </option>
+                        <option value="It">Lập Trình Viên</option>
+                        </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="txtSpham">Chọn sản phẩm tham gia</label></td>
+                <td>
+                    <select name="product" id="txtSpham" style="padding: 3px; font-size: 14px;" size="4">
+                        <option value="1" style="background-color: blue;color: azure;">Kem đánh răng</option>
+                        <option value="2">Bột giặt</option>
+                        <option value="3" style="background-color: blue;color: azure;">Dầu gội đầu  </option>
+                        <option value="4">Sữa tắm </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="txtNumber">Số người dự đoán</label></td>
+                <td><input type="number" id="txtNumber"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="Show()">Đồng ý</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" style="height: 20px;">
+                    <span id="in"></span>
+                </td>
+            </tr>
+        </table>
+</body>
+</html>

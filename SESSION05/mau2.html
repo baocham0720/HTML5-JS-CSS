@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .overlay-image {
+            position: absolute;
+            top: 120px; /* Điều chỉnh vị trí top theo nhu cầu của bạn */
+            left: 0px; /* Điều chỉnh vị trí left theo nhu cầu của bạn */
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .image-container:hover .overlay-image {
+            opacity: 1;
+        }
+    </style>
+    <title>Image Hover Effect</title>
+</head>
+<body>
+
+    <div class="image-container">
+        <img src="hinh-anh-thien-nhien-dep.jpeg" width="100px" height="100px" alt="Original Image">
+        <img class="overlay-image" width="200px" height="200px" src="hinh-anh-thien-nhien-dep.jpeg"Overlay Image>
+    </div>
+
+</body>
+</html>
